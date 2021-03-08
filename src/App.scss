@@ -1,0 +1,55 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.App {
+  padding: 16px;
+  text-align: center;
+  background-color: rebeccapurple;
+  width: calc(100% - 32px);
+  &:first-of-type(button) {
+    top: 10%;
+  }
+}
+
+.rect {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgreen;
+  width: 40%;
+  padding-top: 40%;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-image: conic-gradient(from 0deg, #fff, #000);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  animation-timing-function: ease-out;
+  animation-duration: 1200ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-name: a0;
+}
+
+button {
+  margin-top: 20px;
+}
+
+@media (max-width: 540px) {
+  .rect {
+    width: 100%;
+    padding-top: 100%;
+  }
+}
