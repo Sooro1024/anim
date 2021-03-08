@@ -7,7 +7,7 @@ export const App2 = memo(() => {
 });
 let ankap;
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const ref = useRef(null);
   return (
     <div className="App">
@@ -21,16 +21,13 @@ function App() {
           setCount((prev) => {
             return ++prev;
           });
-          document.documentElement.style.setProperty(
-            "--initial1",
-            `rotate(${count * 90}deg)`
-          );
+          document.documentElement.style.setProperty("--initial1", `${count}`);
           document.documentElement.style.setProperty(
             "--initial2",
-            `rotate(${count * 90 + 1170}deg)`
+            `${count + 1}`
           );
           ref.current.classList.remove("a0");
-          ankap = ref.current.offsetWidth; // trigger a DOM reflow
+          ankap = ref.current.offsetWidth;
           ref.current.classList.add("a0");
         }}
       >

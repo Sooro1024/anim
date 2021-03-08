@@ -13,15 +13,15 @@ code {
 }
 
 html {
-  --initial1: rotate(0deg);
-  --initial2: rotate(90deg);
+  --initial1: 0;
+  --initial2: 1;
 }
 
 @keyframes a0 {
   from {
-    transform: var(--initial1);
+    transform: rotate(calc(var(--initial1) * 90deg));
   }
   to {
-    transform: var(--initial2);
+    transform: rotate(calc(var(--initial2) * 90deg));
   }
 }
